@@ -4,7 +4,8 @@ FROM rockmagicnet/teamcity-agent-docker-compose:latest
 # Installing PHP
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    php-cli php-bz2 php-soap php-curl php-mbstring php-pdo php-xml php-zip zip && \
+    php-cli php-bz2 php-soap php-curl php-mbstring php-pdo \
+    php-gd php-xml php-zip zip && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Installing composer
