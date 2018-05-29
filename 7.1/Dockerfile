@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     php7.1-cli php7.1-bz2 php7.1-soap php7.1-curl php7.1-mbstring php7.1-pdo php7.1-xml php7.1-zip zip && \
-    apt-get purge -y python-software-properties && \
+    apt-get purge -y python-software-properties && apt autoremove -y && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Installing composer
